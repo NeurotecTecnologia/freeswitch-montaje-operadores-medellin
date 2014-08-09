@@ -130,6 +130,13 @@ recibir llamadas.
 
 #### PLAN MARCACION ENTRANTE
 
+El plan de marcaciÓn nos permite dar guia o ruta a la llamada entrante/saliente
+a través de uso de las etiquetas **condition** y la ejecución de
+acciones (**action**) a base de comando; **application**, recomendamos
+revisar la documentación 
+[dptools](https://wiki.freeswitch.org/wiki/Mod_dptools) de
+**Freeswitch**.
+
 ##### conf/dialplan/proveedor.xml
 
 Creamos el contexto del plan de marcación de las llamadas entrantes del
@@ -148,9 +155,9 @@ perfil SIP creado.
 Detallamos el plan de marcación para el número entrante, normalmente
 conectamos la llamada entrante a un [IVR local][#CREACION IVR].
 
-*Nota: reemplazar **midid** con el número que se responde, si se
+**Nota:** reemplazar **midid** con el número que se responde, si se
 responde a una serie de números se puede usar una expresión regular
-para seleccionar el grupo, ej: ^(520000\d)$.*
+para seleccionar el grupo, ej: **^(520000\d)$**
 
 ~~~xml
  <extension name="did_midid">
@@ -168,13 +175,22 @@ para seleccionar el grupo, ej: ^(520000\d)$.*
 
 Implementación 2 tarjetas de red: operador, red local.
 
-...
+~~~bash
+cd /usr/local/freeswitch/conf
+rm -rf conf/
+git clone https://github.com/NeurotecTecnologia/freeswitch-montaje-caso-1.git conf
+~~~
+
 
 # CASO 2 (UNA TARJETA DE RED)
 
 Implementación 1 tarjeta de red: operador, red local.
 
-...
+~~~bash
+cd /usr/local/freeswitch/conf
+rm -rf conf/
+git clone https://github.com/NeurotecTecnologia/freeswitch-montaje-caso-2.git conf
+~~~
 
 # CASO 3 (TRES TARJETAS DE RED)
 
