@@ -46,6 +46,12 @@ Implementación 1 tarjeta de red: operador, red local.
 
 ...
 
+# CASO 3 (TRES TARJETAS DE RED)
+
+Implementación 3 tarjetas de red: operador, red local, red publica.
+
+...
+
 # ENLAZANDO INTERFACES ALIAS
 
 ...
